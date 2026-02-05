@@ -15,7 +15,7 @@ export function PricingSection({ payload, pricing }) {
             {pricing.map((plan) => (
               <Card
                 key={plan.id}
-                className={`p-8 w-full max-w-sm ${plan.isPopular ? 'ring-2 ring-emerald-500 relative' : ''}`}
+                className={`p-8 w-full max-w-sm ${plan.isPopular ? 'ring-2 ring-emerald-500 relative overflow-visible' : ''}`}
               >
                 {plan.isPopular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">

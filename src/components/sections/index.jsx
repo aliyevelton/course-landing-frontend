@@ -7,6 +7,7 @@ import { TestimonialsSection } from './TestimonialsSection';
 import { PricingSection } from './PricingSection';
 import { FaqSection } from './FaqSection';
 import { CtaSection } from './CtaSection';
+import { PlatformComparisonSection } from './PlatformComparisonSection';
 
 const SECTION_MAP = {
   0: HeroSection,
@@ -18,6 +19,7 @@ const SECTION_MAP = {
   6: PricingSection,
   7: FaqSection,
   8: CtaSection,
+  9: PlatformComparisonSection,
 };
 
 export function SectionRenderer({ section, curriculum, pricing, testimonials }) {
