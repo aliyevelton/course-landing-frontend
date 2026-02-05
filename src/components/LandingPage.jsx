@@ -8,9 +8,9 @@ function SectionSkeleton() {
   return (
     <div className="py-16 animate-pulse">
       <div className="container mx-auto px-4 max-w-4xl">
-        <div className="h-10 bg-gray-200 rounded w-2/3 mb-4" />
-        <div className="h-4 bg-gray-200 rounded w-full mb-2" />
-        <div className="h-4 bg-gray-200 rounded w-5/6" />
+        <div className="h-10 bg-gray-200 rounded-2xl w-2/3 mb-4" />
+        <div className="h-4 bg-gray-200 rounded-xl w-full mb-2" />
+        <div className="h-4 bg-gray-200 rounded-xl w-5/6" />
       </div>
     </div>
   );
