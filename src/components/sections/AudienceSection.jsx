@@ -1,9 +1,11 @@
+import { Button } from '../ui/Button';
+
 export function AudienceSection({ payload }) {
   if (!payload) return null;
   const { title, description, bullets } = payload;
   if (!title && !bullets?.length) return null;
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section id="audience" className="py-20 md:py-28 bg-white">
       <div className="container mx-auto px-4 max-w-3xl">
         {title && <h2 className="text-3xl md:text-4xl font-bold mb-4">{title}</h2>}
         {description && <p className="text-lg text-gray-600 mb-10">{description}</p>}
@@ -22,6 +24,11 @@ export function AudienceSection({ payload }) {
             ))}
           </ul>
         )}
+        <div className="flex justify-center mt-12">
+          <a href="#curriculum">
+            <Button variant="outline">See curriculum</Button>
+          </a>
+        </div>
       </div>
     </section>
   );

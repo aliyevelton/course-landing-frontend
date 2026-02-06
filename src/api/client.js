@@ -29,3 +29,12 @@ export async function fetchTestimonials(slug) {
   if (!res.ok) return [];
   return res.json();
 }
+
+export async function subscribeLead(slug, body) {
+  const res = await fetch(`${BASE}/api/courses/${slug}/leads`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+  return res;
+}

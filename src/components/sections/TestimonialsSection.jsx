@@ -1,4 +1,5 @@
 import { Badge } from '../ui/Badge';
+import { Button } from '../ui/Button';
 
 export function TestimonialsSection({ payload, testimonials }) {
   if (!payload && !testimonials?.length) return null;
@@ -27,6 +28,11 @@ export function TestimonialsSection({ payload, testimonials }) {
             ))}
           </div>
         )}
+        <div className="flex justify-center mt-14">
+          <a href="#pricing">
+            <Button variant="primary">See pricing &amp; enroll</Button>
+          </a>
+        </div>
       </div>
     </section>
   );

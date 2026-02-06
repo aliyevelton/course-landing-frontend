@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Button } from '../ui/Button';
 
 export function FaqSection({ payload }) {
   if (!payload?.items?.length) return null;
@@ -52,6 +53,14 @@ export function FaqSection({ payload }) {
               </div>
             </div>
           ))}
+        </div>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-14">
+          <a href="#pricing">
+            <Button variant="primary">See pricing</Button>
+          </a>
+          <a href="#contact">
+            <Button variant="outline">Still have questions? Contact us</Button>
+          </a>
         </div>
       </div>
     </section>

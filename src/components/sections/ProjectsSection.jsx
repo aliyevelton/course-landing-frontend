@@ -1,8 +1,10 @@
+import { Button } from '../ui/Button';
+
 export function ProjectsSection({ payload }) {
   if (!payload?.items?.length) return null;
   const { title, description } = payload;
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section id="projects" className="py-20 md:py-28 bg-white">
       <div className="container mx-auto px-4 max-w-4xl">
         {title && <h2 className="text-3xl md:text-4xl font-bold mb-4">{title}</h2>}
         {description && <p className="text-lg text-gray-600 mb-12">{description}</p>}
@@ -19,6 +21,11 @@ export function ProjectsSection({ payload }) {
               {item.description && <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>}
             </div>
           ))}
+        </div>
+        <div className="flex justify-center mt-12">
+          <a href="#pricing">
+            <Button variant="outline">View pricing</Button>
+          </a>
         </div>
       </div>
     </section>

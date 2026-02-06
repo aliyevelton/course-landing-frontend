@@ -33,7 +33,7 @@ export function CurriculumPreviewSection({ payload, curriculum }) {
         )}
         {ctaText && (
           <div className="flex justify-center">
-            <a href="#curriculum">
+            <a href="#pricing">
               <Button variant="outline">{ctaText}</Button>
             </a>
           </div>

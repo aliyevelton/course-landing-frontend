@@ -9,6 +9,7 @@ import { FaqSection } from './FaqSection';
 import { CtaSection } from './CtaSection';
 import { PlatformComparisonSection } from './PlatformComparisonSection';
 import { ContactUsSection } from './ContactUsSection';
+import { LeadCaptureSection } from './LeadCaptureSection';
 
 const SECTION_MAP = {
   0: HeroSection,
@@ -22,9 +23,10 @@ const SECTION_MAP = {
   8: CtaSection,
   9: PlatformComparisonSection,
   10: ContactUsSection,
+  11: LeadCaptureSection,
 };
 
-export function SectionRenderer({ section, curriculum, pricing, testimonials }) {
+export function SectionRenderer({ section, curriculum, pricing, testimonials, slug }) {
   const Component = SECTION_MAP[section.type];
   if (!Component) return null;
   const payload = typeof section.payload === 'object' ? section.payload : {};
@@ -34,6 +36,7 @@ export function SectionRenderer({ section, curriculum, pricing, testimonials }) 
       curriculum={section.type === 3 ? curriculum : undefined}
       pricing={section.type === 6 ? pricing : undefined}
       testimonials={section.type === 5 ? testimonials : undefined}
+      slug={section.type === 11 ? slug : undefined}
     />
   );
 }

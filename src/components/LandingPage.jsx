@@ -84,6 +84,7 @@ export function LandingPage({ slug = DEFAULT_SLUG }) {
           curriculum={curriculum}
           pricing={pricing}
           testimonials={testimonials}
+          slug={slug}
         />
       ))}
     </main>

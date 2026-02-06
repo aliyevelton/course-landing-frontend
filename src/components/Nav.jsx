@@ -16,6 +16,12 @@ export function Nav() {
             Home
           </a>
           <a
+            href="#pricing"
+            className="relative text-gray-600 hover:text-emerald-600 font-medium transition-colors duration-200 py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-emerald-500 after:transition-all after:duration-200 hover:after:w-full"
+          >
+            Pricing
+          </a>
+          <a
             href="#community"
             className="relative text-gray-600 hover:text-emerald-600 font-medium transition-colors duration-200 py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-emerald-500 after:transition-all after:duration-200 hover:after:w-full"
           >

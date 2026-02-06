@@ -35,9 +35,11 @@ export function PricingSection({ payload, pricing }) {
                     </li>
                   ))}
                 </ul>
-                <Button variant={plan.isPopular ? 'primary' : 'outline'} className="w-full">
-                  Enroll Now
-                </Button>
+                <a href="#contact" className="block w-full">
+                  <Button variant={plan.isPopular ? 'primary' : 'outline'} className="w-full">
+                    Enroll Now
+                  </Button>
+                </a>
               </Card>
             ))}
           </div>
