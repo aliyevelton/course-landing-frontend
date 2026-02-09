@@ -10,6 +10,7 @@ import { CtaSection } from './CtaSection';
 import { PlatformComparisonSection } from './PlatformComparisonSection';
 import { ContactUsSection } from './ContactUsSection';
 import { LeadCaptureSection } from './LeadCaptureSection';
+import { FooterSection } from './FooterSection';
 
 const SECTION_MAP = {
   0: HeroSection,
@@ -24,6 +25,7 @@ const SECTION_MAP = {
   9: PlatformComparisonSection,
   10: ContactUsSection,
   11: LeadCaptureSection,
+  12: FooterSection,
 };
 
 export function SectionRenderer({ section, curriculum, pricing, testimonials, slug }) {
