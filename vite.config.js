@@ -16,5 +16,11 @@ export default defineConfig({
     allowedHosts: [
       'course-landing-frontend-production.up.railway.app'
     ],
+    proxy: {
+      '/api': {
+        target: 'https://course-landing-backend-production.up.railway.app',
+        changeOrigin: true,
+      },
+    },
   },
 })
