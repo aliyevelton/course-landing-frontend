@@ -12,4 +12,9 @@ export default defineConfig({
       },
     },
   },
+  preview: {
+    allowedHosts: [
+      'course-landing-frontend-production.up.railway.app'
+    ],
+  },
 })
