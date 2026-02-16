@@ -2,7 +2,6 @@ import { HeroSection } from './HeroSection';
 import { TrustMetricsSection } from './TrustMetricsSection';
 import { AudienceSection } from './AudienceSection';
 import { CurriculumPreviewSection } from './CurriculumPreviewSection';
-import { ProjectsSection } from './ProjectsSection';
 import { TestimonialsSection } from './TestimonialsSection';
 import { PricingSection } from './PricingSection';
 import { FaqSection } from './FaqSection';
@@ -17,7 +16,6 @@ const SECTION_MAP = {
   1: TrustMetricsSection,
   2: AudienceSection,
   3: CurriculumPreviewSection,
-  4: ProjectsSection,
   5: TestimonialsSection,
   6: PricingSection,
   7: FaqSection,

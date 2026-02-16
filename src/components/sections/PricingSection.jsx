@@ -11,7 +11,7 @@ export function PricingSection({ payload, pricing }) {
         {title && <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">{title}</h2>}
         {subtitle && <p className="text-lg text-gray-600 mb-14 text-center">{subtitle}</p>}
         {pricing?.length > 0 && (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          <div className="flex flex-wrap justify-center gap-8">
             {pricing.map((plan) => (
               <Card
                 key={plan.id}

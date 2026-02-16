@@ -119,11 +119,11 @@ export function HeroSection({ payload }) {
             {headline}
           </h1>
         </div>
-        <div className={`grid gap-10 lg:gap-14 items-center ${hasVideo ? 'lg:grid-cols-2' : ''} ${!hasVideo ? 'max-w-2xl mx-auto' : ''}`}>
-          <div className={`animate-fade-in-up ${hasVideo ? 'order-2 lg:order-1 lg:ml-auto lg:max-w-md lg:text-left lg:pl-8' : 'text-center'}`}>
-            {subheadline && <p className={`text-xl text-slate-300 mb-5 ${hasVideo ? 'lg:text-left' : ''}`}>{subheadline}</p>}
+        <div className={`grid gap-10 lg:gap-14 items-center ${hasVideo ? 'lg:grid-cols-2' : ''} ${!hasVideo ? 'max-w-[62rem] mx-auto' : ''}`}>
+          <div className={`animate-fade-in-up flex flex-col items-center ${hasVideo ? 'order-2 lg:order-1 lg:ml-auto lg:max-w-[48rem] lg:items-start lg:text-left lg:pl-8' : 'text-center'}`}>
+            {subheadline && <p className={`text-xl text-slate-300 mb-5 w-full ${hasVideo ? 'lg:text-left' : ''}`}>{subheadline}</p>}
             {primaryCtaText && (
-              <div className="flex flex-col items-center gap-3">
+              <div className="flex flex-col items-center gap-3 w-full">
                 <a href={primaryCtaUrl || '#pricing'}>
                   <Button variant="primary" className="text-lg px-10 py-4 rounded-2xl">
                     {primaryCtaText}

@@ -46,8 +46,8 @@ export function FooterSection({ payload }) {
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Stay in touch</h4>
             <p className="text-emerald-200/80 text-sm">
               Questions? Reach out at{' '}
-              <a href="mailto:support@appmillers.com" className="text-emerald-300 hover:text-white underline underline-offset-2 transition-colors">
-                support@appmillers.com
+              <a href="mailto:info@appmillers.com" className="text-emerald-300 hover:text-white underline underline-offset-2 transition-colors">
+                info@appmillers.com
               </a>
             </p>
           </div>
