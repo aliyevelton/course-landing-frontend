@@ -62,15 +62,21 @@ function HeroVideo({ videoUrl }) {
   );
 }
 
-const ClockIcon = () => (
+const SupportIcon = () => (
   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
   </svg>
 );
 
-const CodeIcon = () => (
+const CohortsIcon = () => (
   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+  </svg>
+);
+
+const InterviewIcon = () => (
+  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
   </svg>
 );
 
@@ -88,9 +94,10 @@ const BadgeIcon = () => (
 
 
 const FEATURES = [
-  { icon: ClockIcon, label: '45+ hours' },
-  { icon: CodeIcon, label: '200+ exercises' },
   { icon: InfIcon, label: 'Lifetime access' },
+  { icon: SupportIcon, label: '24/7 Support' },
+  { icon: CohortsIcon, label: 'Weekly Cohorts' },
+  { icon: InterviewIcon, label: 'Mock interviews' },
 ];
 
 export function HeroSection({ payload }) {
@@ -108,15 +115,8 @@ export function HeroSection({ payload }) {
             <BadgeIcon />
             <span className="text-sm font-medium text-emerald-200">Python • Data Structures &amp; Algorithms</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
-            {headline && headline.includes(' & ') ? (
-              <>
-                {headline.split(' & ')[0]} & <br />
-                {headline.split(' & ').slice(1).join(' & ')}
-              </>
-            ) : (
-              headline
-            )}
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight">
+            {headline}
           </h1>
         </div>
         <div className={`grid gap-10 lg:gap-14 items-center ${hasVideo ? 'lg:grid-cols-2' : ''} ${!hasVideo ? 'max-w-2xl mx-auto' : ''}`}>

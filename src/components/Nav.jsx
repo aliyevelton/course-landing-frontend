@@ -4,8 +4,9 @@ export function Nav() {
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         <a
           href="/"
-          className="text-lg font-bold text-gray-900 hover:text-emerald-600 transition-all duration-200 hover:scale-[1.02]"
+          className="flex items-center gap-2 text-lg font-bold text-gray-900 hover:text-emerald-600 transition-all duration-200 hover:scale-[1.02]"
         >
+          <img src="/appmillers-logo.png" alt="AppMillers" className="h-8 w-auto" />
           AppMillers
         </a>
         <div className="flex gap-8">
