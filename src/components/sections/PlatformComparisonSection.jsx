@@ -22,7 +22,7 @@ export function PlatformComparisonSection({ payload }) {
             <thead>
               <tr className="bg-slate-100">
                 <th className="text-left px-6 py-5 font-bold text-gray-900">Feature</th>
-                <th className="text-center px-6 py-5 font-bold text-emerald-700 bg-emerald-50/50">
+                <th className="text-center px-6 py-5 font-bold text-brand-700 bg-brand-50/50">
                   {ourPlatformName}
                 </th>
                 <th className="text-center px-6 py-5 font-bold text-gray-500">
@@ -34,12 +34,12 @@ export function PlatformComparisonSection({ payload }) {
               {rows.map((row, i) => (
                 <tr
                   key={i}
-                  className={`border-t border-gray-100 transition-colors hover:bg-emerald-50/30 ${i % 2 === 0 ? 'bg-white' : 'bg-slate-50/30'}`}
+                  className={`border-t border-gray-100 transition-colors hover:bg-brand-50/30 ${i % 2 === 0 ? 'bg-white' : 'bg-slate-50/30'}`}
                 >
                   <td className="px-6 py-4 text-gray-900">{row.feature}</td>
                   <td className="px-6 py-4 text-center">
                     {row.onOurPlatform ? (
-                      <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 font-bold">
+                      <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-logo-yellow/20 text-logo-yellow font-bold border border-logo-yellow/60">
                         ✓
                       </span>
                     ) : (

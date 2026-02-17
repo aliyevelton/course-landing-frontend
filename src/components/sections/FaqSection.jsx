@@ -14,7 +14,7 @@ export function FaqSection({ payload }) {
             <div
               key={i}
               className={`bg-white rounded-2xl border overflow-hidden transition-all duration-300 ${
-                open === i ? 'border-emerald-200 shadow-lg' : 'border-gray-100 hover:border-gray-200'
+                open === i ? 'border-logo-yellow shadow-lg' : 'border-gray-100 hover:border-gray-200'
               }`}
             >
               <button
@@ -24,7 +24,7 @@ export function FaqSection({ payload }) {
                 {item.question}
                 <span
                   className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-colors duration-300 ${
-                    open === i ? 'bg-emerald-500 text-white' : 'bg-slate-100 text-gray-600'
+                    open === i ? 'bg-logo-yellow text-gray-900' : 'bg-slate-100 text-gray-600'
                   }`}
                 >
                   <svg

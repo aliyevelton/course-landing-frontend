@@ -39,7 +39,7 @@ export function ContactUsSection({ payload }) {
               ? (
                   <>
                     {subtitle.split(email)[0]}
-                    <a href={`mailto:${email}`} className="text-emerald-600 font-medium hover:text-emerald-700 underline">
+                    <a href={`mailto:${email}`} className="text-brand-600 font-medium hover:text-brand-700 underline">
                       {email}
                     </a>
                     {subtitle.split(email)[1]}
@@ -50,7 +50,7 @@ export function ContactUsSection({ payload }) {
         )}
 
         <div className="rounded-3xl overflow-hidden shadow-xl border border-gray-100 bg-white flex flex-col md:flex-row">
-          <div className="md:w-1/3 bg-gradient-to-br from-teal-400 via-emerald-500 to-teal-600 p-8 md:p-12 flex items-center justify-center min-h-[200px] md:min-h-[400px]">
+          <div className="md:w-1/3 contact-side-bg p-8 md:p-12 flex items-center justify-center min-h-[200px] md:min-h-[400px]">
             <svg
               viewBox="0 0 200 160"
               className="w-full max-w-[180px] text-white/90"
@@ -75,8 +75,8 @@ export function ContactUsSection({ payload }) {
                     placeholder="Enter your first name"
                     value={form.firstName}
                     onChange={(e) => setForm({ ...form, firstName: e.target.value })}
-                    className={`w-full px-4 py-3 rounded-xl border outline-none transition-all focus:ring-2 focus:ring-emerald-500/20 ${
-                      errors.firstName ? 'border-red-400 focus:border-red-400' : 'border-gray-200 focus:border-emerald-500'
+                    className={`w-full px-4 py-3 rounded-xl border outline-none transition-all focus:ring-2 focus:ring-brand-500/20 ${
+                      errors.firstName ? 'border-red-400 focus:border-red-400' : 'border-gray-200 focus:border-brand-500'
                     }`}
                   />
                 </div>
@@ -87,8 +87,8 @@ export function ContactUsSection({ payload }) {
                     placeholder="Enter your last name"
                     value={form.lastName}
                     onChange={(e) => setForm({ ...form, lastName: e.target.value })}
-                    className={`w-full px-4 py-3 rounded-xl border outline-none transition-all focus:ring-2 focus:ring-emerald-500/20 ${
-                      errors.lastName ? 'border-red-400 focus:border-red-400' : 'border-gray-200 focus:border-emerald-500'
+                    className={`w-full px-4 py-3 rounded-xl border outline-none transition-all focus:ring-2 focus:ring-brand-500/20 ${
+                      errors.lastName ? 'border-red-400 focus:border-red-400' : 'border-gray-200 focus:border-brand-500'
                     }`}
                   />
                 </div>
@@ -100,8 +100,8 @@ export function ContactUsSection({ payload }) {
                   placeholder="Enter your email"
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className={`w-full px-4 py-3 rounded-xl border outline-none transition-all focus:ring-2 focus:ring-emerald-500/20 ${
-                    errors.email ? 'border-red-400 focus:border-red-400' : 'border-gray-200 focus:border-emerald-500'
+                  className={`w-full px-4 py-3 rounded-xl border outline-none transition-all focus:ring-2 focus:ring-brand-500/20 ${
+                    errors.email ? 'border-red-400 focus:border-red-400' : 'border-gray-200 focus:border-brand-500'
                   }`}
                 />
               </div>
@@ -112,8 +112,8 @@ export function ContactUsSection({ payload }) {
                   rows={4}
                   value={form.question}
                   onChange={(e) => setForm({ ...form, question: e.target.value })}
-                  className={`w-full px-4 py-3 rounded-xl border outline-none transition-all focus:ring-2 focus:ring-emerald-500/20 resize-none ${
-                    errors.question ? 'border-red-400 focus:border-red-400' : 'border-gray-200 focus:border-emerald-500'
+                  className={`w-full px-4 py-3 rounded-xl border outline-none transition-all focus:ring-2 focus:ring-brand-500/20 resize-none ${
+                    errors.question ? 'border-red-400 focus:border-red-400' : 'border-gray-200 focus:border-brand-500'
                   }`}
                 />
               </div>

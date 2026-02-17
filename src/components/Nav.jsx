@@ -5,7 +5,7 @@ export function Nav() {
         <a
           href="#"
           onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-          className="flex items-center gap-2 text-lg font-bold text-gray-900 hover:text-emerald-600 transition-all duration-200 hover:scale-[1.02]"
+          className="flex items-center gap-2 text-lg font-bold text-gray-900 hover:text-logo-yellow transition-all duration-200 hover:scale-[1.02]"
         >
           <img src="/appmillers-logo.png" alt="AppMillers" className="h-8 w-auto" />
           AppMillers
@@ -14,13 +14,13 @@ export function Nav() {
           <a
             href="#"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-            className="relative text-gray-600 hover:text-emerald-600 font-medium transition-colors duration-200 py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-emerald-500 after:transition-all after:duration-200 hover:after:w-full"
+            className="relative text-gray-600 hover:text-logo-yellow font-medium transition-colors duration-200 py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-logo-yellow after:transition-all after:duration-200 hover:after:w-full"
           >
             Home
           </a>
           <a
             href="#pricing"
-            className="relative text-gray-600 hover:text-emerald-600 font-medium transition-colors duration-200 py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-emerald-500 after:transition-all after:duration-200 hover:after:w-full"
+            className="relative text-gray-600 hover:text-logo-yellow font-medium transition-colors duration-200 py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-logo-yellow after:transition-all after:duration-200 hover:after:w-full"
           >
             Pricing
           </a>
@@ -28,7 +28,7 @@ export function Nav() {
             href="https://www.appmillers.com/products/communities/appmillers-student-community"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative text-gray-600 hover:text-emerald-600 font-medium transition-colors duration-200 py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-emerald-500 after:transition-all after:duration-200 hover:after:w-full"
+            className="relative text-gray-600 hover:text-logo-yellow font-medium transition-colors duration-200 py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-logo-yellow after:transition-all after:duration-200 hover:after:w-full"
           >
             Community
           </a>
@@ -36,13 +36,13 @@ export function Nav() {
             href="https://elshadk.substack.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative text-gray-600 hover:text-emerald-600 font-medium transition-colors duration-200 py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-emerald-500 after:transition-all after:duration-200 hover:after:w-full"
+            className="relative text-gray-600 hover:text-logo-yellow font-medium transition-colors duration-200 py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-logo-yellow after:transition-all after:duration-200 hover:after:w-full"
           >
             Newsletter
           </a>
           <a
             href="#contact"
-            className="relative text-gray-600 hover:text-emerald-600 font-medium transition-colors duration-200 py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-emerald-500 after:transition-all after:duration-200 hover:after:w-full"
+            className="relative text-gray-600 hover:text-logo-yellow font-medium transition-colors duration-200 py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-logo-yellow after:transition-all after:duration-200 hover:after:w-full"
           >
             Contact
           </a>

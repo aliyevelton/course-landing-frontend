@@ -1,4 +1,3 @@
-import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
 
 export function TestimonialsSection({ payload, testimonials }) {
@@ -14,7 +13,7 @@ export function TestimonialsSection({ payload, testimonials }) {
             {testimonials.map((t) => (
               <div
                 key={t.id}
-                className="group bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl hover:border-emerald-100 hover:-translate-y-1 transition-all duration-300"
+                className="group bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl hover:border-logo-yellow hover:-translate-y-1 transition-all duration-300"
               >
                 <p className="text-gray-700 mb-4 text-lg leading-relaxed">"{t.quote}"</p>
                 <div className="flex items-center justify-between pt-4 border-t border-gray-100">
@@ -22,7 +21,7 @@ export function TestimonialsSection({ payload, testimonials }) {
                     <div className="font-bold text-gray-900">{t.name}</div>
                     {t.role && <div className="text-sm text-gray-500">{t.role}</div>}
                   </div>
-                  {t.isVerified && <Badge>Verified</Badge>}
+                  {t.isVerified && <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-logo-yellow text-gray-900 shadow-sm">Verified</span>}
                 </div>
               </div>
             ))}

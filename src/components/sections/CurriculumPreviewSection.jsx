@@ -29,7 +29,7 @@ const MODULE_OUTCOMES = [
 ];
 
 const CheckIcon = () => (
-  <svg className="w-4 h-4 flex-shrink-0 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <svg className="w-4 h-4 flex-shrink-0 text-logo-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
   </svg>
 );
@@ -41,18 +41,18 @@ function CurriculumModuleCard({ module, index, isExpanded, onToggle }) {
 
   return (
     <div
-      className="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg hover:border-emerald-100 transition-all duration-300"
+      className="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg hover:border-brand-100 transition-all duration-300"
     >
       <button
         type="button"
         onClick={onToggle}
         className="w-full p-6 text-left flex items-start gap-4 hover:bg-gray-50/50 transition-colors"
       >
-        <span className="flex-shrink-0 w-12 h-12 rounded-xl bg-emerald-500 text-white flex items-center justify-center">
+        <span className="flex-shrink-0 w-12 h-12 rounded-xl bg-brand-500 text-white flex items-center justify-center">
           {IconComponent && <IconComponent />}
         </span>
         <div className="flex-1 min-w-0">
-          <span className="inline-block px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-xs font-semibold mb-2">
+          <span className="inline-block px-2.5 py-0.5 rounded-full bg-logo-yellow/20 text-gray-800 text-xs font-semibold mb-2 border border-logo-yellow/60">
             Module {index + 1}
           </span>
           <h3 className="font-bold text-lg text-gray-900 mb-1">{module.title}</h3>
@@ -60,7 +60,7 @@ function CurriculumModuleCard({ module, index, isExpanded, onToggle }) {
             <p className="text-gray-600 text-sm mb-2">{module.description}</p>
           )}
           {outcome && (
-            <p className="text-emerald-700/90 text-sm font-medium">
+            <p className="text-brand-700/90 text-sm font-medium">
               You'll learn to: {outcome}
             </p>
           )}
@@ -69,7 +69,7 @@ function CurriculumModuleCard({ module, index, isExpanded, onToggle }) {
           )}
         </div>
         <span
-          className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-emerald-600 transition-transform duration-200 ${
+          className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-brand-600 transition-transform duration-200 ${
             isExpanded ? 'rotate-180' : ''
           }`}
         >
@@ -92,7 +92,7 @@ function CurriculumModuleCard({ module, index, isExpanded, onToggle }) {
               >
                 <CheckIcon />
                 <span className="flex-1 text-sm text-gray-800 font-medium">{l.title}</span>
-                <span className="text-emerald-600 font-semibold text-sm">{l.durationMinutes} min</span>
+                <span className="text-brand-600 font-semibold text-sm">{l.durationMinutes} min</span>
               </li>
             ))}
           </ul>
@@ -126,7 +126,7 @@ export function CurriculumPreviewSection({ payload, curriculum }) {
                 <div
                   key={i}
                   className={`h-1.5 flex-1 rounded-full transition-colors duration-300 ${
-                    i <= expandedIndex ? 'bg-emerald-500' : 'bg-gray-200'
+                    i <= expandedIndex ? 'bg-logo-yellow' : 'bg-gray-200'
                   }`}
                 />
               ))}

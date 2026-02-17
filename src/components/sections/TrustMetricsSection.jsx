@@ -59,8 +59,8 @@ function MetricCard({ metric, isVisible }) {
   const displayValue = useCountUp(metric.value, isVisible);
 
   return (
-    <div className="group text-center p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:border-emerald-100 hover:-translate-y-0.5 transition-all duration-300">
-      <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-emerald-500 to-emerald-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
+    <div className="group text-center p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:border-brand-100 hover:-translate-y-0.5 transition-all duration-300">
+      <div className="text-2xl md:text-3xl font-bold text-logo-yellow group-hover:scale-110 transition-transform duration-300">
         {displayValue}
       </div>
       <div className="text-sm text-gray-600 mt-2 font-medium">{metric.label}</div>

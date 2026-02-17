@@ -36,7 +36,7 @@ export function LeadCaptureSection({ payload, slug = 'data-structures-algorithms
   };
 
   return (
-    <section id="lead-capture" className="py-20 md:py-28 bg-gradient-to-br from-emerald-50 via-teal-50 to-slate-50 border-y border-emerald-100/50">
+    <section id="lead-capture" className="py-20 md:py-28 section-lead-bg border-y border-brand-100">
       <div className="container mx-auto px-4 max-w-2xl">
         {headline && (
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-900">
@@ -48,7 +48,7 @@ export function LeadCaptureSection({ payload, slug = 'data-structures-algorithms
         )}
 
         {status === 'success' ? (
-          <div className="text-center py-8 px-6 rounded-2xl bg-emerald-100/80 border border-emerald-200 text-emerald-800 font-medium">
+          <div className="text-center py-8 px-6 rounded-2xl bg-logo-yellow/10 border-2 border-logo-yellow/60 text-gray-800 font-medium">
             {message}
           </div>
         ) : (
@@ -59,7 +59,7 @@ export function LeadCaptureSection({ payload, slug = 'data-structures-algorithms
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               disabled={status === 'loading'}
-              className="flex-1 px-5 py-3.5 rounded-xl border border-gray-200 outline-none transition-all focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500 disabled:opacity-70"
+              className="flex-1 px-5 py-3.5 rounded-xl border border-gray-200 outline-none transition-all focus:ring-2 focus:ring-brand-500/30 focus:border-brand-500 disabled:opacity-70"
               required
             />
             <Button

@@ -33,19 +33,19 @@ export function AudienceSection({ payload }) {
   const { title, description, bullets, statLine } = payload;
   if (!title && !bullets?.length) return null;
   return (
-    <section id="audience" className="relative py-20 md:py-28 bg-gradient-to-b from-slate-50 via-emerald-50/30 to-slate-50 overflow-hidden">
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%2310b981\' fill-opacity=\'0.04\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-80" />
+    <section id="audience" className="relative py-20 md:py-28 section-audience-bg overflow-hidden">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%232E6BA8\' fill-opacity=\'0.04\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-80" />
       <div className="relative container mx-auto px-4 max-w-3xl text-center">
         {title && (
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 via-emerald-800 to-gray-900 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 title-gradient-brand">
             {title}
           </h2>
         )}
         {description && <p className="text-lg text-gray-600 mb-6">{description}</p>}
-        <div className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-emerald-500/10 border border-emerald-200/60 text-emerald-800 font-semibold text-sm mb-10">
+        <div className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-logo-yellow/10 border border-logo-yellow/60 text-gray-800 font-semibold text-sm mb-10">
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-logo-yellow opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-logo-yellow" />
           </span>
           {statLine ?? 'Join 200K+ developers who leveled up their DSA skills'}
         </div>
@@ -56,9 +56,9 @@ export function AudienceSection({ payload }) {
               return (
                 <li
                   key={i}
-                  className="flex items-start gap-4 p-5 rounded-2xl bg-white shadow-sm border border-gray-100/80 hover:shadow-lg hover:border-emerald-200 hover:-translate-y-0.5 transition-all duration-300 group"
+                  className="flex items-start gap-4 p-5 rounded-2xl bg-white shadow-sm border border-gray-100/80 hover:shadow-lg hover:border-brand-200 hover:-translate-y-0.5 transition-all duration-300 group"
                 >
-                  <span className="flex-shrink-0 w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center group-hover:scale-110 group-hover:bg-emerald-600 transition-all duration-300 shadow-sm">
+                  <span className="flex-shrink-0 w-10 h-10 rounded-xl bg-brand-500 text-white flex items-center justify-center group-hover:scale-110 group-hover:bg-brand-600 transition-all duration-300 shadow-sm">
                     {IconComponent && <IconComponent />}
                   </span>
                   <span className="text-gray-700 font-medium pt-2">{b}</span>

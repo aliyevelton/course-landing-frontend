@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Brand palette – single source of truth so all UI colors work */
+:root {
+  --brand-50: #E8F0FA;
+  --brand-100: #C5D9F2;
+  --brand-200: #9EC0E9;
+  --brand-300: #6FA0DC;
+  --brand-400: #4A85CE;
+  --brand-500: #2E6BA8;
+  --brand-600: #285D96;
+  --brand-700: #1F4A78;
+  --brand-800: #18385B;
+  --brand-900: #12283F;
+  --brand-950: #0B1929;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -12,6 +27,63 @@
   }
 }
 
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    background: linear-gradient(to right, var(--brand-500), var(--brand-600));
+    color: white;
+  }
+  .btn-primary:hover {
+    background: linear-gradient(to right, var(--brand-600), var(--brand-700));
+  }
+  .btn-outline {
+    border: 2px solid var(--brand-500);
+    color: var(--brand-600);
+    background: transparent;
+  }
+  .btn-outline:hover {
+    background-color: var(--brand-50);
+  }
+  .text-brand-blue {
+    color: var(--brand-700);
+  }
+  .hover\:bg-brand-light:hover {
+    background-color: var(--brand-50);
+  }
+
+  /* Section backgrounds (gradients that don't rely on Tailwind theme) */
+  .section-hero-bg {
+    background: linear-gradient(to bottom right, #0f172a, var(--brand-950), #0f172a);
+  }
+  .section-cta-bg {
+    background: linear-gradient(to bottom right, var(--brand-500), var(--brand-600), var(--brand-800));
+  }
+  .section-footer-bg {
+    background: linear-gradient(to bottom, var(--brand-950), #020617);
+  }
+  .section-audience-bg {
+    background: linear-gradient(to bottom, #f8fafc, rgba(232, 240, 250, 0.3), #f8fafc);
+  }
+  .section-lead-bg {
+    background: linear-gradient(to bottom right, var(--brand-50), var(--brand-50), #f8fafc);
+  }
+  .contact-side-bg {
+    background: linear-gradient(to bottom right, var(--brand-400), var(--brand-500), var(--brand-600));
+  }
+  .title-gradient-brand {
+    background: linear-gradient(to right, #111827, var(--brand-800), #111827);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .card-popular {
+    box-shadow: 0 0 0 2px var(--brand-500), 0 20px 25px -5px rgb(0 0 0 / 0.1);
+  }
+  .badge-bg {
+    background: linear-gradient(to right, var(--brand-500), var(--brand-600));
+  }
+}
+
 @layer utilities {
   .animate-fade-in {
     animation: fadeIn 0.6s ease-out forwards;
@@ -19,6 +91,89 @@
   .animate-fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
   }
+  /* Logo yellow – element and SVG use same color so icons (currentColor) are visible */
+  .text-logo-yellow,
+  .text-logo-yellow svg {
+    color: #FDD835;
+  }
+  .bg-logo-yellow {
+    background-color: #FDD835;
+  }
+  .border-logo-yellow { border-color: #FDD835; }
+  .border-logo-yellow\/60 { border-color: rgba(253, 216, 53, 0.6); }
+  .border-l-logo-yellow { border-left-color: #FDD835; }
+  @media (min-width: 768px) {
+    .md\:border-l-logo-yellow { border-left-color: #FDD835; }
+  }
+  .bg-logo-yellow\/60 { background-color: rgba(253, 216, 53, 0.6); }
+  .hover\:text-logo-yellow:hover { color: #FDD835; }
+  .hover\:border-logo-yellow:hover { border-color: #FDD835; }
+  .after\:bg-logo-yellow::after { background-color: #FDD835; }
+  .bg-logo-yellow\/10 { background-color: rgba(253, 216, 53, 0.1); }
+  .bg-logo-yellow\/20 { background-color: rgba(253, 216, 53, 0.2); }
+
+  /* Brand text */
+  .text-brand-100 { color: var(--brand-100); }
+  .text-brand-200 { color: var(--brand-200); }
+  .text-brand-300 { color: var(--brand-300); }
+  .text-brand-500 { color: var(--brand-500); }
+  .text-brand-600 { color: var(--brand-600); }
+  .text-brand-700 { color: var(--brand-700); }
+  .text-brand-800 { color: var(--brand-800); }
+  .text-brand-200\/80 { color: rgba(158, 192, 233, 0.8); }
+  .text-brand-200\/90 { color: rgba(158, 192, 233, 0.9); }
+  .text-brand-300\/80 { color: rgba(111, 160, 220, 0.8); }
+  .text-brand-100\/90 { color: rgba(197, 217, 242, 0.9); }
+  .text-brand-100\/80 { color: rgba(197, 217, 242, 0.8); }
+  .text-brand-700\/90 { color: rgba(31, 74, 120, 0.9); }
+
+  /* Brand background */
+  .bg-brand-50 { background-color: var(--brand-50); }
+  .bg-brand-100 { background-color: var(--brand-100); }
+  .bg-brand-200 { background-color: var(--brand-200); }
+  .bg-brand-400 { background-color: var(--brand-400); }
+  .bg-brand-500 { background-color: var(--brand-500); }
+  .bg-brand-600 { background-color: var(--brand-600); }
+  .bg-brand-700 { background-color: var(--brand-700); }
+  .bg-brand-800 { background-color: var(--brand-800); }
+  .bg-brand-950 { background-color: var(--brand-950); }
+  .bg-brand-50\/30 { background-color: rgba(232, 240, 250, 0.3); }
+  .bg-brand-50\/50 { background-color: rgba(232, 240, 250, 0.5); }
+  .bg-brand-100\/50 { background-color: rgba(197, 217, 242, 0.5); }
+  .bg-brand-100\/80 { background-color: rgba(197, 217, 242, 0.8); }
+  .bg-brand-500\/10 { background-color: rgba(46, 107, 168, 0.1); }
+  .bg-brand-800\/50 { background-color: rgba(24, 56, 91, 0.5); }
+
+  /* Brand border */
+  .border-brand-100 { border-color: var(--brand-100); }
+  .border-brand-200 { border-color: var(--brand-200); }
+  .border-brand-500 { border-color: var(--brand-500); }
+  .border-brand-800 { border-color: var(--brand-800); }
+  .border-brand-100\/50 { border-color: rgba(197, 217, 242, 0.5); }
+  .border-brand-200\/60 { border-color: rgba(158, 192, 233, 0.6); }
+  .border-brand-800\/50 { border-color: rgba(24, 56, 91, 0.5); }
+
+  /* Nav link underline */
+  .after\:bg-brand-500::after {
+    background-color: var(--brand-500);
+  }
+
+  /* Hover states */
+  .hover\:text-brand-200:hover { color: var(--brand-200); }
+  .hover\:text-brand-300:hover { color: var(--brand-300); }
+  .hover\:text-brand-600:hover { color: var(--brand-600); }
+  .hover\:text-brand-700:hover { color: var(--brand-700); }
+  .hover\:border-brand-100:hover { border-color: var(--brand-100); }
+  .hover\:bg-brand-50:hover { background-color: var(--brand-50); }
+  .hover\:bg-brand-50\/30:hover { background-color: rgba(232, 240, 250, 0.3); }
+  .hover\:bg-brand-600:hover { background-color: var(--brand-600); }
+
+  /* Ring / focus (use with ring-2) */
+  .ring-brand-500 { --tw-ring-color: var(--brand-500); }
+  .focus\:ring-brand-500:focus { --tw-ring-color: var(--brand-500); box-shadow: 0 0 0 2px var(--brand-500); }
+  .focus\:border-brand-500:focus { border-color: var(--brand-500); }
+  .focus\:ring-brand-500\/20:focus { box-shadow: 0 0 0 2px rgba(46, 107, 168, 0.2); }
+  .focus\:ring-brand-500\/30:focus { box-shadow: 0 0 0 2px rgba(46, 107, 168, 0.3); }
 }
 
 @keyframes fadeIn {

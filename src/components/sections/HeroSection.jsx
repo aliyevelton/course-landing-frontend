@@ -113,14 +113,14 @@ export function HeroSection({ payload }) {
   const hasVideo = !!videoUrl;
 
   return (
-    <section className="relative pt-8 pb-12 md:pt-8 md:pb-12 bg-gradient-to-br from-slate-900 via-emerald-950 to-slate-900 text-white overflow-hidden">
-      <div className="absolute inset-0 opacity-30 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(16,185,129,0.4),transparent)]" />
+    <section className="relative pt-8 pb-12 md:pt-8 md:pb-12 section-hero-bg text-white overflow-hidden">
+      <div className="absolute inset-0 opacity-30 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(46,107,168,0.4),transparent)]" />
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.03\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
       <div className={`relative container mx-auto px-4 ${hasVideo ? 'max-w-6xl' : 'max-w-4xl'}`}>
         <div className="text-center mb-10 md:mb-14 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-logo-yellow/60 mb-6">
             <BadgeIcon />
-            <span className="text-sm font-medium text-emerald-200">Python • Data Structures &amp; Algorithms</span>
+            <span className="text-sm font-medium text-logo-yellow">Python • Data Structures &amp; Algorithms</span>
           </div>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight">
             {headline}
@@ -136,7 +136,7 @@ export function HeroSection({ payload }) {
                     {primaryCtaText}
                   </Button>
                 </a>
-                <a href="#curriculum" className="text-white text-sm font-medium uppercase underline underline-offset-4 hover:text-emerald-200 transition-colors">
+                <a href="#curriculum" className="text-white text-sm font-medium uppercase underline underline-offset-4 hover:text-brand-200 transition-colors">
                   Or view the curriculum
                 </a>
               </div>
@@ -151,7 +151,7 @@ export function HeroSection({ payload }) {
         <div className="flex flex-wrap gap-6 md:gap-8 justify-center text-slate-400 mt-10 md:mt-14 animate-fade-in-up">
           {FEATURES.map(({ icon: Icon, label }) => (
             <div key={label} className="flex items-center gap-2">
-              <span className="text-emerald-400">
+              <span className="text-logo-yellow">
                 <Icon />
               </span>
               <span className="font-medium">{label}</span>

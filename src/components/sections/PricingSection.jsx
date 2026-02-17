@@ -15,11 +15,11 @@ export function PricingSection({ payload, pricing }) {
             {pricing.map((plan) => (
               <Card
                 key={plan.id}
-                className={`p-8 w-full max-w-sm ${plan.isPopular ? 'ring-2 ring-emerald-500 shadow-xl relative overflow-visible md:scale-105' : ''}`}
+                className={`p-8 w-full max-w-sm ${plan.isPopular ? 'card-popular shadow-xl relative overflow-visible md:scale-105' : ''}`}
               >
                 {plan.isPopular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <Badge>Popular</Badge>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-logo-yellow text-gray-900 shadow-sm">Popular</span>
                   </div>
                 )}
                 <h3 className="font-semibold text-xl mb-2">{plan.title}</h3>
@@ -30,7 +30,7 @@ export function PricingSection({ payload, pricing }) {
                 <ul className="space-y-2 mb-8 text-sm text-gray-600">
                   {plan.features?.map((f, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <span className="text-emerald-500">✓</span>
+                      <span className="text-logo-yellow">✓</span>
                       {f}
                     </li>
                   ))}
