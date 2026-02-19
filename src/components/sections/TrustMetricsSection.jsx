@@ -87,7 +87,7 @@ export function TrustMetricsSection({ payload }) {
 
   if (!payload?.metrics?.length) return null;
   return (
-    <section ref={sectionRef} className="py-16 md:py-20 bg-gradient-to-b from-white to-slate-50">
+    <section ref={sectionRef} className="pt-16 md:pt-20 pb-8 md:pb-10 bg-gradient-to-b from-white to-slate-50">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {payload.metrics.map((m, i) => (

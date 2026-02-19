@@ -9,7 +9,7 @@ export function PlatformComparisonSection({ payload }) {
   } = payload;
 
   return (
-    <section id="community" className="py-20 md:py-28 bg-gradient-to-b from-slate-50 to-white">
+    <section id="community" className="pt-10 md:pt-14 pb-20 md:pb-28 bg-gradient-to-b from-slate-50 to-white">
       <div className="container mx-auto px-4 max-w-4xl">
         {title && (
           <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">{title}</h2>

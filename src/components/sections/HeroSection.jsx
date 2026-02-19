@@ -86,8 +86,8 @@ const InfIcon = () => (
   </svg>
 );
 
-const BadgeIcon = () => (
-  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+const BadgeIcon = ({ className = 'w-4 h-4' }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
   </svg>
 );
@@ -118,13 +118,12 @@ export function HeroSection({ payload }) {
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.03\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
       <div className={`relative container mx-auto px-4 ${hasVideo ? 'max-w-6xl' : 'max-w-4xl'}`}>
         <div className="text-center mb-10 md:mb-14 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-logo-yellow/60 mb-6">
-            <BadgeIcon />
-            <span className="text-sm font-medium text-logo-yellow">Python • Data Structures &amp; Algorithms</span>
-          </div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight">
-            {headline}
-          </h1>
+          {headline && (
+            <h1 className="inline-flex items-center gap-3 px-6 py-4 md:px-8 md:py-5 rounded-full bg-white/10 backdrop-blur-sm border border-logo-yellow/60">
+              <BadgeIcon className="w-8 h-8 md:w-10 md:h-10 shrink-0 text-logo-yellow" />
+              <span className="text-2xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-logo-yellow">{headline}</span>
+            </h1>
+          )}
         </div>
         <div className={`grid gap-10 lg:gap-14 items-center ${hasVideo ? 'lg:grid-cols-2' : ''} ${!hasVideo ? 'max-w-[62rem] mx-auto' : ''}`}>
           <div className={`animate-fade-in-up flex flex-col items-center ${hasVideo ? 'order-2 lg:order-1 lg:ml-auto lg:max-w-[48rem] lg:items-start lg:text-left lg:pl-8' : 'text-center'}`}>
